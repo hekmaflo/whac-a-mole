@@ -1,0 +1,51 @@
+body {
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  flex-direction: column;
+  border-radius: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.board {
+  margin: 0.5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  border-style: solid;
+  height: 34em;
+  width: 34em;
+  background-color: darkgreen;
+}
+
+.mole {
+  background-color: blueviolet;
+  height: auto;
+  width: auto;
+  border-style: solid;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.start-btn {
+  font-size: 30px;
+  padding: 5px 10px;
+  margin-top: 10px;
+
+  color: aliceblue;
+  background-color: crimson;
+  border-radius: 10px;
+  border-style: none;
+}
