@@ -1,25 +1,21 @@
-const moles = document.querySelectorAll(".mole");
-console.log(moles);
-// const myFunction = (item) => {
-//   console.log("hi");
-// };
-let myfunction = (mole) => {
-  mole = moles;
-  mole.addEventListener("click", () => {
-    console.log("click");
-  });
-};
-moles.forEach(myFunction());
-// });
+const timer = document.querySelector(".timer");
+const start = document.querySelector(".start-btn");
 
-// for (let i = 0; i < moles.length; i++) {
-//   moles[i].addEventListener("click", () => {
-//     console.log("click");
-//   });
-// }
+// start.addEventListener("click", startCountdown());
 
-// hello = () => {
-//   document.getElementsByClassName("mole").innerHTML += "his";
-// };
+function startCountdown(seconds) {
+  let counter = seconds;
 
-// hello();
+  const interval = setInterval(() => {
+    timer.innerHTML = `TIME LEFT: ${counter}`;
+    console.log(counter);
+    counter--;
+
+    if (counter < 0) {
+      clearInterval(interval);
+      console.log("Ding!");
+    }
+  }, 1000);
+}
+
+startCountdown(10);
