@@ -50,6 +50,8 @@ Use camelCase for JavaScript variables</li>
 
 ✅[Google](https://www.google.com) | ✅[Imgur](https://i.imgur.com/EPrEq1m.jpg)
 
-##
+### Assets:
+
+[DevianArt](https://www.deviantart.com/felipetop/art/Excavator-Mole-Spritemon-900570586)
 
 ---

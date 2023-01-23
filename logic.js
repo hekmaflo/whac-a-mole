@@ -33,7 +33,9 @@ const molePopUp = () => {
   //mole add
   const moleInterval = setInterval(() => {
     const randomNum = Math.floor(Math.random() * 9);
-    spaces[randomNum].innerHTML = `<h2>hello</h2>`;
+    spaces[
+      randomNum
+    ].innerHTML = `<img class="mole-asst" src="./assets/mole2.png" alt="" />`;
 
     // mole hide
     const moleMole = setInterval(() => {
