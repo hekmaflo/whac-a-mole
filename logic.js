@@ -1,10 +1,19 @@
 const timer = document.querySelector(".timer");
 const start = document.querySelector(".start-btn");
+const spaces = document.querySelectorAll(".mole");
 
-// start.addEventListener("click", startCountdown());
+// Event Listeners for board spaces
+spaces.forEach((mole) => {
+  mole.addEventListener("click", function () {
+    console.log("click");
+  });
+});
+
+// Starts the Global countdown for game.
+start.addEventListener("click", startCountdown);
 
 function startCountdown(seconds) {
-  let counter = seconds;
+  let counter = 10;
 
   const interval = setInterval(() => {
     timer.innerHTML = `TIME LEFT: ${counter}`;
@@ -18,4 +27,4 @@ function startCountdown(seconds) {
   }, 1000);
 }
 
-startCountdown(10);
+// startCountdown(10);
