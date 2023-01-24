@@ -11,6 +11,7 @@ let moleUp = false;
 function startCountdown(seconds) {
   let counter = 59;
   gameSound.innerHTML = `<audio src="./assets/game-start.mp3" autoplay>
+  </audio> <audio src="./assets/half-cool.mp3" autoplay>
   </audio>`;
 
   const interval = setInterval(() => {
