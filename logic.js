@@ -2,19 +2,15 @@ const timer = document.querySelector(".timer");
 const start = document.querySelector(".start-btn");
 const spaces = document.querySelectorAll(".mole");
 
-// Event Listeners for board spaces
-spaces.forEach((mole) => {
-  mole.addEventListener("click", function () {
-    console.log("click");
-  });
-});
+let score = 0;
+let moleUp = false;
 
 function startCountdown(seconds) {
-  let counter = 10;
+  let counter = 59;
 
   const interval = setInterval(() => {
-    timer.innerHTML = `TIME LEFT: ${counter}`;
-    console.log(counter);
+    timer.innerHTML = `TIME LEFT: 00:${counter}`;
+    // console.log(counter);
     counter--;
 
     if (counter < 0) {
@@ -28,28 +24,34 @@ function startCountdown(seconds) {
 
 // this function will choose randome spaces on the board (still need to get rid of the pop-ups)
 const molePopUp = () => {
-  let moleCounter = 10;
+  let moleCounter = 59;
 
   //mole add
   const moleInterval = setInterval(() => {
     const randomNum = Math.floor(Math.random() * 9);
-    spaces[
-      randomNum
-    ].innerHTML = `<img class="mole-asst" src="./assets/mole2.png" alt="" />`;
+    const randomNumTwo = Math.floor(Math.random() * 9);
 
+    moleImg = `<img class="mole-asst" src="./assets/mole2.png" alt="" />`;
+    moleUp = true;
+    spaces[randomNum].innerHTML = moleImg;
+    spaces[randomNumTwo].innerHTML = moleImg;
     // mole hide
     const moleMole = setInterval(() => {
+      moleUp = false;
       spaces[randomNum].innerHTML = "";
+      clearInterval(moleMole);
+
+      spaces[randomNumTwo].innerHTML = "";
       clearInterval(moleMole);
     }, 1000);
 
-    console.log(moleCounter);
+    // console.log(moleCounter);
     moleCounter--;
 
     if (moleCounter < 0) {
       clearInterval(moleInterval);
     }
-  }, 1000);
+  }, 2000);
 };
 
 // molePopUp();
@@ -57,3 +59,13 @@ const molePopUp = () => {
 // Starts the Global countdown & moles for game.
 start.addEventListener("click", startCountdown);
 start.addEventListener("click", molePopUp);
+// Event Listeners for board spaces
+spaces.forEach((mole) => {
+  mole.addEventListener("click", function (e) {
+    if (moleUp) {
+      score++;
+      console.log(`score: ${score}`);
+      console.log("click");
+    }
+  });
+});

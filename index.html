@@ -6,18 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <script src="./logic.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
     <body>
       <header>
-        <h1 class="top-element">WHAC-A-MOLE</h1>
-        <h2 class="timer">TIME LEFT: 10</h2>
+        <h1 class="top-title">WHAC-A-MOLE</h1>
+        <h2 class="timer">TIME LEFT: 1:00</h2>
+        <h2 id="the-score">CURRENT SCORE:0</h2>
       </header>
       <div class="board">
-        <div class="mole">
-          <!-- <img class="mole-asst" src="./assets/mole.png" alt="" /> -->
-        </div>
+        <div class="mole"></div>
         <div class="mole"></div>
         <div class="mole"></div>
         <div class="mole"></div>
@@ -29,7 +34,6 @@
       </div>
       <div class="score">
         <button class="start-btn">START</button>
-        <h2>CURRENT SCORE: 0</h2>
       </div>
     </body>
   </body>

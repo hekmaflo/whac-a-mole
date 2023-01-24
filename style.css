@@ -1,17 +1,31 @@
 body {
-  margin: 50px;
+  margin: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-style: solid;
+  /* border-style: solid; */
   flex-direction: column;
-  border-radius: 15px;
+  background-color: blueviolet;
+  /* border-radius: 15px; */
   font-family: Arial, Helvetica, sans-serif;
 }
 
 h1,
 h2 {
   text-align: center;
+  color: azure;
+}
+
+.top-title {
+  font-family: "Press Start 2P", cursive;
+  font-size: 48px;
+}
+
+.timer {
+  background-color: crimson;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: "Press Start 2P", cursive;
 }
 
 .board {
@@ -20,6 +34,7 @@ h2 {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   border-style: solid;
+  border-color: chartreuse;
   height: 34em;
   width: 34em;
   /* background-color: darkgreen; */
@@ -34,6 +49,7 @@ h2 {
   height: auto;
   width: auto;
   border-style: solid;
+  border-color: greenyellow;
 }
 
 .score {
@@ -43,14 +59,20 @@ h2 {
   flex-direction: column;
 }
 
+#the-score {
+  padding-top: 5px;
+  color: gold;
+  font-family: "Press Start 2P", cursive;
+}
+
 .start-btn {
   font-size: 30px;
-  padding: 5px 10px;
+  padding: 10px 10px;
   margin-top: 10px;
-
+  font-family: "Press Start 2P", cursive;
   color: aliceblue;
   background-color: crimson;
-  border-radius: 10px;
+  border-radius: 5px;
   border-style: none;
 }
 
