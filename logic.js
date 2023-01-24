@@ -2,6 +2,7 @@ const timer = document.querySelector(".timer");
 const start = document.querySelector(".start-btn");
 const spaces = document.querySelectorAll(".mole");
 const currentScore = document.querySelector("#the-score");
+const gameSound = document.querySelector(".sound");
 // console.log(currentScore);
 
 let score = 0;
@@ -9,6 +10,8 @@ let moleUp = false;
 
 function startCountdown(seconds) {
   let counter = 59;
+  gameSound.innerHTML = `<audio src="./assets/game-start.mp3" autoplay>
+  </audio>`;
 
   const interval = setInterval(() => {
     timer.innerHTML = `TIME LEFT:00:${counter}`;
@@ -77,7 +80,8 @@ spaces.forEach((mole) => {
     if (mole.classList.contains("mole-up")) {
       score++;
       currentScore.innerHTML = `CURRENT SCORE:${score}`;
-      this.innerHTML = `<img class="mole-asst" src="./assets/fire.png" alt="" />`;
+      this.innerHTML = `<img class="mole-asst" src="./assets/fire.png" alt="" /> <audio src="./assets/sfx_whac.mp3" autoplay>
+      </audio>`;
       //   console.log(`score: ${score}`);
       //   console.log("click");
     }
