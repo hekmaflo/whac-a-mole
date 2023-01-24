@@ -2,7 +2,7 @@ const timer = document.querySelector(".timer");
 const start = document.querySelector(".start-btn");
 const spaces = document.querySelectorAll(".mole");
 const currentScore = document.querySelector("#the-score");
-console.log(currentScore);
+// console.log(currentScore);
 
 let score = 0;
 let moleUp = false;
@@ -11,7 +11,11 @@ function startCountdown(seconds) {
   let counter = 59;
 
   const interval = setInterval(() => {
-    timer.innerHTML = `TIME LEFT: 00:${counter}`;
+    timer.innerHTML = `TIME LEFT:00:${counter}`;
+
+    if (counter < 10) {
+      timer.innerHTML = `TIME LEFT:00:0${counter}`;
+    }
     // console.log(counter);
     counter--;
 
@@ -26,7 +30,7 @@ function startCountdown(seconds) {
 
 // this function will choose randome spaces on the board (still need to get rid of the pop-ups)
 const molePopUp = () => {
-  let moleCounter = 59;
+  let moleCounter = 30;
 
   //mole add
   const moleInterval = setInterval(() => {
@@ -39,6 +43,7 @@ const molePopUp = () => {
     spaces[randomNumTwo].innerHTML = moleImg;
     spaces[randomNum].classList.add("mole-up");
     spaces[randomNumTwo].classList.add("mole-up");
+
     // mole hide
     const moleMole = setInterval(() => {
       moleUp = false;
@@ -65,14 +70,16 @@ const molePopUp = () => {
 // Starts the Global countdown & moles for game.
 start.addEventListener("click", startCountdown);
 start.addEventListener("click", molePopUp);
+
 // Event Listeners for board spaces
 spaces.forEach((mole) => {
   mole.addEventListener("click", function (e) {
     if (mole.classList.contains("mole-up")) {
       score++;
       currentScore.innerHTML = `CURRENT SCORE:${score}`;
-      console.log(`score: ${score}`);
-      console.log("click");
+      this.innerHTML = `<img class="mole-asst" src="./assets/fire.png" alt="" />`;
+      //   console.log(`score: ${score}`);
+      //   console.log("click");
     }
   });
 });
