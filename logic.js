@@ -26,7 +26,7 @@ function startCountdown(seconds) {
     if (counter < 0) {
       clearInterval(interval);
       alert(`Your final score : ${score}`);
-      //   gameSound.innerHTML = "";
+      //   gameSound.innerHTML += "";
       console.log("Ding!");
     }
   }, 1000);
