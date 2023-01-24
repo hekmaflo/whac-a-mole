@@ -25,6 +25,8 @@ function startCountdown(seconds) {
 
     if (counter < 0) {
       clearInterval(interval);
+      alert(`Your final score : ${score}`);
+      //   gameSound.innerHTML = "";
       console.log("Ding!");
     }
   }, 1000);
@@ -34,7 +36,7 @@ function startCountdown(seconds) {
 
 // this function will choose randome spaces on the board (still need to get rid of the pop-ups)
 const molePopUp = () => {
-  let moleCounter = 30;
+  let moleCounter = 28;
 
   //mole add
   const moleInterval = setInterval(() => {
