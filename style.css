@@ -63,17 +63,24 @@ h2 {
   padding-top: 5px;
   color: gold;
   font-family: "Press Start 2P", cursive;
+  font-size: 18px;
 }
 
 .start-btn {
   font-size: 30px;
   padding: 10px 10px;
   margin-top: 10px;
+  margin-bottom: 10px;
   font-family: "Press Start 2P", cursive;
   color: aliceblue;
   background-color: crimson;
   border-radius: 5px;
   border-style: none;
+}
+
+.start-btn:hover {
+  background-color: goldenrod;
+  padding: 13px 13px;
 }
 
 .mole-asst {
@@ -93,4 +100,12 @@ h2 {
   width: 45em;
   margin-top: 10em;
   border-radius: 5em;
+  border-style: solid;
+  border-color: azure;
+}
+
+#instructions {
+  text-align: center;
+  font-size: 12px;
+  width: 35em;
 }
