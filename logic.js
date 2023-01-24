@@ -1,6 +1,8 @@
 const timer = document.querySelector(".timer");
 const start = document.querySelector(".start-btn");
 const spaces = document.querySelectorAll(".mole");
+const currentScore = document.querySelector("#the-score");
+console.log(currentScore);
 
 let score = 0;
 let moleUp = false;
@@ -35,13 +37,17 @@ const molePopUp = () => {
     moleUp = true;
     spaces[randomNum].innerHTML = moleImg;
     spaces[randomNumTwo].innerHTML = moleImg;
+    spaces[randomNum].classList.add("mole-up");
+    spaces[randomNumTwo].classList.add("mole-up");
     // mole hide
     const moleMole = setInterval(() => {
       moleUp = false;
       spaces[randomNum].innerHTML = "";
+      spaces[randomNum].classList.remove("mole-up");
       clearInterval(moleMole);
 
       spaces[randomNumTwo].innerHTML = "";
+      spaces[randomNumTwo].classList.remove("mole-up");
       clearInterval(moleMole);
     }, 1000);
 
@@ -62,8 +68,9 @@ start.addEventListener("click", molePopUp);
 // Event Listeners for board spaces
 spaces.forEach((mole) => {
   mole.addEventListener("click", function (e) {
-    if (moleUp) {
+    if (mole.classList.contains("mole-up")) {
       score++;
+      currentScore.innerHTML = `CURRENT SCORE:${score}`;
       console.log(`score: ${score}`);
       console.log("click");
     }
