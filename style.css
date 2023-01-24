@@ -80,3 +80,17 @@ h2 {
   height: 150px;
   width: 150px;
 }
+
+.landing-board {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: black;
+  font-family: "Press Start 2P", cursive;
+  color: azure;
+  height: 34em;
+  width: 45em;
+  margin-top: 10em;
+  border-radius: 5em;
+}

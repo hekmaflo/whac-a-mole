@@ -54,5 +54,6 @@ Use camelCase for JavaScript variables</li>
 
 Mole - [DevianArt](https://www.deviantart.com/felipetop/art/Excavator-Mole-Spritemon-900570586)
 | Grass - [DevianArt](https://www.deviantart.com/sarahstudiosart/art/Grass-Tile-3-458649228)
+| Fire - [PixelArtMaker](http://pixelartmaker.com/art/99d3853cad9ebbc)
 
 ---
