@@ -4,7 +4,6 @@ const spaces = document.querySelectorAll(".mole");
 const currentScore = document.querySelector("#the-score");
 const gameSound = document.querySelector(".sound");
 const reset = document.querySelector("#reset-btn");
-// console.log(currentScore);
 
 let score = 0;
 let finishGame = false;
@@ -23,14 +22,11 @@ function startCountdown(seconds) {
     if (counter < 10) {
       timer.innerHTML = `TIME LEFT:00:0${counter}`;
     }
-    // console.log(counter);
     counter--;
 
     if (counter < 0) {
       clearInterval(interval);
       alert(`Your final score : ${score}`);
-      //   gameSound.innerHTML += "";
-      console.log("Ding!");
     }
     if (finishGame === true) {
       timer.innerHTML = `TIME LEFT:1:00`;
@@ -38,8 +34,6 @@ function startCountdown(seconds) {
     }
   }, 1000);
 }
-
-// startCountdown(10);
 
 // this function will choose randome spaces on the board (still need to get rid of the pop-ups)
 const molePopUp = () => {
@@ -74,7 +68,6 @@ const molePopUp = () => {
       }
     }, 1000);
 
-    // console.log(moleCounter);
     moleCounter--;
 
     if (moleCounter < 0) {
@@ -82,8 +75,6 @@ const molePopUp = () => {
     }
   }, 2000);
 };
-
-// molePopUp();
 
 // Restart Game function
 
@@ -107,8 +98,6 @@ spaces.forEach((mole) => {
       currentScore.innerHTML = `CURRENT SCORE:${score}`;
       this.innerHTML = `<img class="mole-asst" src="./assets/fire.png" alt="" /> <audio src="./assets/sfx_whac.mp3" autoplay>
       </audio>`;
-      //   console.log(`score: ${score}`);
-      //   console.log("click");
     }
   });
 });
