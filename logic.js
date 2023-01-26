@@ -73,6 +73,14 @@ const molePopUp = () => {
 
 // molePopUp();
 
+// Restart Game function
+
+// const restartGame = () => {
+//   let score = 0
+//   let moleCounter = 0
+//   let
+// }
+
 // Starts the Global countdown & moles for game.
 start.addEventListener("click", startCountdown);
 start.addEventListener("click", molePopUp);
