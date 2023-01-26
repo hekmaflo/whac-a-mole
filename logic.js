@@ -7,9 +7,11 @@ const reset = document.querySelector("#reset-btn");
 // console.log(currentScore);
 
 let score = 0;
+let finishGame = false;
 let moleUp = false;
 
 function startCountdown(seconds) {
+  finishGame = false;
   let counter = 59;
   gameSound.innerHTML = `<audio src="./assets/game-start.mp3" autoplay>
   </audio> <audio src="./assets/half-cool.mp3" autoplay>
@@ -30,6 +32,10 @@ function startCountdown(seconds) {
       //   gameSound.innerHTML += "";
       console.log("Ding!");
     }
+    if (finishGame === true) {
+      timer.innerHTML = `TIME LEFT:1:00`;
+      clearInterval(interval);
+    }
   }, 1000);
 }
 
@@ -37,6 +43,7 @@ function startCountdown(seconds) {
 
 // this function will choose randome spaces on the board (still need to get rid of the pop-ups)
 const molePopUp = () => {
+  finishGame = false;
   let moleCounter = 28;
 
   //mole add
@@ -61,6 +68,10 @@ const molePopUp = () => {
       spaces[randomNumTwo].innerHTML = "";
       spaces[randomNumTwo].classList.remove("mole-up");
       clearInterval(moleMole);
+
+      if (finishGame === true) {
+        clearInterval(moleInterval);
+      }
     }, 1000);
 
     // console.log(moleCounter);
@@ -79,9 +90,8 @@ const molePopUp = () => {
 const restartGame = () => {
   score = 0;
   currentScore.innerHTML = `CURRENT SCORE:0`;
-  counter = 59;
+  finishGame = true;
   timer.innerHTML = `TIME LEFT:1:00`;
-  moleCounter = 0;
 };
 
 // Starts the Global countdown & moles for game.
