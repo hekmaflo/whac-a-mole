@@ -3,6 +3,7 @@ const start = document.querySelector(".start-btn");
 const spaces = document.querySelectorAll(".mole");
 const currentScore = document.querySelector("#the-score");
 const gameSound = document.querySelector(".sound");
+const reset = document.querySelector("#reset-btn");
 // console.log(currentScore);
 
 let score = 0;
@@ -75,15 +76,18 @@ const molePopUp = () => {
 
 // Restart Game function
 
-// const restartGame = () => {
-//   let score = 0
-//   let moleCounter = 0
-//   let
-// }
+const restartGame = () => {
+  score = 0;
+  currentScore.innerHTML = `CURRENT SCORE:0`;
+  counter = 59;
+  timer.innerHTML = `TIME LEFT:1:00`;
+  moleCounter = 0;
+};
 
 // Starts the Global countdown & moles for game.
 start.addEventListener("click", startCountdown);
 start.addEventListener("click", molePopUp);
+reset.addEventListener("click", restartGame);
 
 // Event Listeners for board spaces
 spaces.forEach((mole) => {
