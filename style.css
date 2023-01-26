@@ -31,12 +31,12 @@ h2 {
 .board {
   margin: 0.5em;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   border-style: solid;
   border-color: chartreuse;
   height: 34em;
-  width: 34em;
+  width: 44em;
   /* background-color: darkgreen; */
   background-image: url(./assets/grass2.png);
 }
