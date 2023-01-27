@@ -13,15 +13,18 @@
 
 # Description
 
+<p align="center">
+<img src="https://i.imgur.com/k1FwceT.png"  width="600">
+</p>
 Whac-a-Mole is a classic arcade game where players use a mallet to hit moles as they pop out of holes in a playfield. The goal of the game is to hit as many moles as possible within a time limit. The game is implemented using HTML, CSS and JavaScript for the front-end and Vanilla JavaScript for the game logic. With this project, players can play the game on browser.
 
 ---
 
 # Getting Started
 
-### To start playing click below:
+### start playing by clicking below:
 
-🟢 [Click Me](https://www.google.com)
+🟢 [Whac-a-Mole](https://whac-a-mole-8bit.surge.sh/)
 
 ---
 
@@ -44,6 +47,17 @@ Use camelCase for JavaScript variables</li>
 
 ---
 
+# Future Implementations
+
+<ul>
+<li>Different board Sizes</li>
+<li> Add a high score board </li>
+<li> Difficulty options </li>
+<li> Obstacles </li>
+</ul>
+
+---
+
 ## Credits
 
 ### Images:
@@ -56,5 +70,3 @@ Mole - [DevianArt](https://www.deviantart.com/felipetop/art/Excavator-Mole-Sprit
 | Grass - [DevianArt](https://www.deviantart.com/sarahstudiosart/art/Grass-Tile-3-458649228)
 | Fire - [PixelArtMaker](http://pixelartmaker.com/art/99d3853cad9ebbc)
 | Sound & Music - [Pixabay](https://pixabay.com/sound-effects/search/8-bit/)
-
----
